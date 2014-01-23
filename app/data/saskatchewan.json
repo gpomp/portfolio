@@ -1,0 +1,5 @@
+{
+	"name": "Saskatchewan.ca",
+	"imgList": 3,
+	"description": "<p>The official website of the Saskatchewan governement.</p><h2>Goals</h2><p>Create HTML5 fast and accessible templates to be integrated in Sitecore by the backend team. Different templates are loaded by Sitecore on mobile using the user-agent of the browser.</p><h2>Tools</h2><ul><li>Node.js - Grunt to preprocess, debug and minify html, stylesheets (LESS) and Javascript</li><li>Bootstrap 3.0 to manage the responsive aspect, components and grid system of the site</li></ul><h2>Made at</h2><p><a href='http://www.blastradius.com/' target='_blank'>Blast Radius</a></p><h2>Check it out</h2><p><a href='http://www.saskatchewan.ca/' target='_blank'>Saskatchewan.ca</a></p>"
+} 

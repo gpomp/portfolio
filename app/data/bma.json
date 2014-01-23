@@ -1,0 +1,5 @@
+{
+	"name": "Castrol - Best Miles Ahead",
+	"imgList": 2,
+	"description": "<p>A facebook App for Castrol</p><h2>Goals</h2><p>Create a simple page app for Castrol \"counting\" (thru a simple algorithm) the number of miles before a big life event and then the user can share it with his friends.</p><h2>Tools</h2><ul><li>Facebook Api</li><li>CoffeeScript</li><li>Docpad for Node.js</li></ul><h2>Made at</h2><p><a href='http://www.blastradius.com/' target='_blank'>Blast Radius</a></p><h2>Check it out</h2><p><a href='https://www.facebook.com/castrolusa/app_344497335653777' target='_blank'>Best Miles Ahead</a></p>"
+} 

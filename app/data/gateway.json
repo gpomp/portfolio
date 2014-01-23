@@ -1,0 +1,5 @@
+{
+	"name": "The Digital Gateway",
+	"imgList": 3,
+	"description": "<p>A 110ft long interactive corridor made for the 2010 Olympics game at the Commerce Centre</p><h2>Goals</h2><p>Create the system that will display the experience. Develop and animate all the secondary animations (lines, background animations) that is draw when a user walk thru the corridor.</p><h2>Tools</h2><ul><li>Flash for the animations and the app</li><li>Infrared sensors to detect people position along the corridor</li></ul><h2>Made at</h2><p><a href='http://switchunited.com/' target='_blank'>Switch United</a></p><h2>Check it out</h2><p><a href='http://vimeo.com/9139927' target='_blank'>The Digital Gateway on Vimeo</a></p>"
+} 

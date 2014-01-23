@@ -1,0 +1,446 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
+
+@import 'sass-bootstrap/lib/bootstrap';
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0; 
+}   
+
+html {
+    font-size: 100%;
+}
+
+/* Space out content a bit */
+body { 
+    font-size: 100%;
+    font-size: 1em;
+
+    
+}
+
+h1 {
+    font-weight:600;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer { 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+ 
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+    font-size: 21px; 
+    padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+} 
+
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: $screen-sm) {
+    .container {
+        max-width: $screen-sm;
+    }
+
+    /* Remove the padding we set earlier */
+    .header, 
+    .marketing,
+    .footer { 
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px; 
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+
+body a {
+    color:#000; 
+    text-decoration: underline;
+
+    &:hover {
+        color:#000;
+        text-decoration: none;
+    }
+}
+ 
+#d3-canvas {
+    position:fixed;
+    top:0;
+    left: 0;
+    svg {
+        path {
+            stroke: #000;
+            fill: #FFF;
+        }
+    }
+} 
+
+header {
+    width: 100%;
+    background:#000;
+    position: relative;
+    z-index: 5;
+
+    .container {
+        color:#FFF; 
+        padding-top:1em; 
+        padding-bottom:1em;
+        div {
+            font-size: 5em;
+        }
+
+        span {
+            font-size: 2em;
+        }
+
+        a {
+            color: #FFF;
+            float: right;
+            font-size: 2em; 
+        }
+    }
+}
+
+.projects-list {
+   
+    position: relative;
+
+    .container {
+        background:#f1f1f1; 
+        overflow: hidden;
+        @include box-shadow( 0px 0px 10px 0px rgba(50, 50, 50, 0.75));
+        padding: 0;
+    }
+    ul {
+        margin: 0;
+        padding:0;
+
+        @include clearfix();
+ 
+        li {
+            list-style: none; 
+            display: block;
+            float:left;
+            position:relative;
+            padding: 2em; 
+
+            a {
+                display: block;
+                text-align:center;
+                color:#000;
+                text-decoration: none;
+                > div {
+                    height:200px;
+                    width: 200px;
+                    overflow: hidden;
+                    position:relative;
+                    img, > div {
+                        position:absolute;
+                        top:0;
+                        left:0;
+                    }
+
+                    > div {
+                        top:0; 
+                        left:0;
+                        border:20px solid #f1f1f1;
+                        z-index:2;
+                        width:100%;
+                        height:100%;
+
+                        @include transform-origin(50% 50%); 
+                    }
+
+                    @media screen and (max-width: $screen-sm-max) {
+                        
+
+
+                        & > div {
+                            border:none;
+                        }
+                    }
+                }
+
+                &.hover {
+                    & > div {
+
+                        & > div {
+                            //@include transform(scale(1.25) rotate(5deg));
+                        }
+                    }
+                            
+                }
+
+                span {
+                    position: absolute;
+                    top:30%;
+                    display: block;
+                    padding-top:0.5em;
+                    font-weight: 600;
+                    font-size: 1.5em;
+                    text-decoration: none;
+                    width: 100%;
+                    background: #f1f1f1;
+                    @include box-shadow( 0px 0px 10px 0px rgba(50, 50, 50, 0.75));
+                }
+            }
+        }
+    }
+}
+ 
+.project { 
+    width: 100%; 
+    position:absolute;
+    top:0;   
+    left:0; 
+    z-index:4; 
+
+    .container {  
+        margin: 0 auto;
+        padding:0;
+        padding-top: 192px;
+
+        section {
+            padding:1em; 
+            background:#f1f1f1;   
+        }
+         
+        section.title, section.dev, section.img-list { 
+            @include transform-origin(top left); 
+            @include perspective(5000);  
+            -webkit-transform-style: preserve-3d;
+        } 
+        section.title {
+             
+            @include transform(rotateY(90deg) translate3d(0, 0, 0)); 
+            opacity : 0; 
+            position: relative;
+            overflow: hidden;
+
+            h1 {
+                width: 75%;
+                float: left;
+            }
+            div.project-nav {
+                position:absolute;
+                top:0;
+                right:0;
+                overflow:hidden;
+                a {
+                    float:left;
+                     font-size: 2em;
+                    font-weight: 600;
+                    color:#f1f1f1;
+                    background:#000;
+                    border:1px solid #000;
+                    padding: 0.75em;
+                   
+                    width:auto;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: none;
+                        color:#000;
+                        background:#f1f1f1;
+                    }
+
+                    &.disabled {
+                        pointer-events: none;
+                        opacity: .3; 
+                    }
+                }
+            }
+        } 
+
+        section.dev { 
+            @include transform(rotateY(90deg) translate3d(0, 0, 0)); 
+            opacity : 0; 
+        }
+        section.img-list {
+            padding-top:0;
+            padding-bottom: 0;
+            border-top:10px solid #000;
+            border-bottom:10px solid #000;
+            width: 100%;
+            position:relative;
+            @include transform(rotateY(90deg) translate3d(0, 0, 0)); 
+            opacity : 0; 
+
+            .swipe { 
+                max-width: 1100px;
+                width: 100%;
+                margin: 0 auto;
+                overflow: hidden;
+                visibility: hidden;
+                position: relative;
+               max-height: 200px;
+               .swipe-wrap {
+                  overflow: hidden;
+                  position: relative; 
+
+                  & > div {
+                    float:left;
+                    width:100%;
+                    position: relative;
+                    img {
+                        @include img-responsive();
+                    }
+                  }
+                }
+
+                a {
+                    display: none;
+                    opacity:0;
+                    height: 70%;
+                    width: 8%;
+                    position:absolute;
+                    top:15%;
+
+                    .bg {
+                        background:#000;
+                        opacity: 0.3;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width: 100%;
+                        height: 100%;
+                    } 
+
+                    .sp {
+                        background:url(../images/arrow.png) no-repeat ;
+                        background-position:center center;
+                        position:absolute;
+                        top:0;
+                        left:0;   
+                        width: 100%;
+                        height: 100%;
+                        z-index:2;
+                    }
+
+                    &.prev {
+                        @include rotate(180deg);
+                        left:0;
+                    } 
+     
+                    &.next {
+                        right:0;
+                    }
+
+                    &.close {
+                        width: 10%;
+                        height: 10%;
+                        left:45%; 
+                        top:0;
+
+
+                        .bg {
+                            @include border-bottom-radius(50%);
+                        }
+
+                        .sp {
+                            @include rotate(-90deg);
+                            background-position:70% center;
+                        }
+
+                    }
+
+                }
+            }
+        }
+    } 
+}   
+@media screen and (max-width: $screen-sm-max) {
+    h1 { 
+        font-size: 3em; 
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+ 
+    header {
+        .container {
+            div {
+                font-size: 3em;
+                line-height: 0.8em;
+            }
+
+            span {
+                font-size: 1.5em;
+                padding-top: 1em;
+                display: inline-block;
+            }
+
+            a { 
+                font-size: 1em;
+                padding-top: 1.8em;
+            }
+        }
+        
+    } 
+  
+    .project {
+        .container {
+            section.title {
+
+                h1 {
+                    width: 100%;
+                    margin-top: 1.5em;
+                }
+
+                div.project-nav {
+                    a {
+                        padding: 0.25em;
+                    }
+                }
+            }
+        }
+    }
+}

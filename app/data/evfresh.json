@@ -1,0 +1,5 @@
+{
+	"name": "Evolution Fresh In Store Installation",
+	"imgList": 3,
+	"description": "<p>An interactive installation for the Evolution Fresh store</p><h2>Goals</h2><p>Create an app that display generative art from the tap pulled by the barrista. Play movies when the application is in IDLE mode and display a menu when clients press a button on the counter. Make the list of movies, flavor of taps and menu dynamic and easy to change for the team.</p><h2>Tools</h2><ul><li>OpenFrameworks to create generative art and the global app</li><li>GStreamer to play high res movies at a good quality and ensure good performances</li><li>Arduino to connect the buttons, taps to the application (electronic not done by me).</li></ul><h2>Made at</h2><p><a href='http://www.blastradius.com/' target='_blank'>Blast Radius</a></p>"
+} 

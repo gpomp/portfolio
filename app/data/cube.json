@@ -1,0 +1,5 @@
+{
+	"name": "The curious Tree",
+	"imgList": 3,
+	"description": "<p>An interactive experience made for the 2010 Olympics game at the art gallery</p><h2>Goals</h2><p>Create 4 different apps and animations for a cube with 4 touch screen.</p><h2>Tools</h2><ul><li>Flash for the animations and the app</li><li>UDP port connexion to pass the touch position from the touch app to Flashh</li></ul><h2>Made at</h2><p><a href='http://switchunited.com/' target='_blank'>Switch United</a></p><h2>Check it out</h2><p><a href='http://vimeo.com/9407654' target='_blank'>The Curious Tree on Vimeo</a></p>"
+} 

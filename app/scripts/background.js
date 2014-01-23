@@ -49,10 +49,10 @@ var BackgroundView = Backbone.View.extend({
 		.attr("d", function(d) { return "M" + d.join("L") + "Z"; })
 		.attr("stroke-width", "5")
 		.attr("style", function(d) {
-			var x = Math.abs(d[0][0] - hw);
+			var x = Math.abs(d[0][0] - hw);  
 			var y = Math.abs(d[0][1] - hh);
 			var c = Math.round((x * x + y * y) / maxDist * 255);
-			return "stroke:rgb("+c+", "+c+", "+c+")";
+			return "stroke:rgb("+c+", "+c+", "+c+");";
 		});
     }
 });

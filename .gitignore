@@ -11,3 +11,4 @@ app/bower_components
 .tmp
 
 test/bower_components/
+*.sublime-workspace

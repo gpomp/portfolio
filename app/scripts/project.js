@@ -44,8 +44,8 @@ var ProjectDescrView = Backbone.View.extend({
         this.lockButtons = false; 
         var template = _.template($('#project').html(), {project: this.collection.models[0], currentProject:this.currentProject});
         this.$el.find(".container").html(template);  
-        _gaq.push(['_trackEvent', 'Page', 'Click', this.collection.models[0].attributes.name]);
-
+        //_gaq.push(['_trackEvent', 'Page', 'Click', this.collection.models[0].attributes.name]);
+        ga('send' ,'pageview', Backbone.history.fragment);
         if(!window.isMobile) {
             $("#slider").hover(this.overImages, this.outImages);
             $("#slider").bind("click", this.showImage);  
@@ -192,6 +192,7 @@ var ProjectDescrView = Backbone.View.extend({
     },  
 
     showImage : function() {
+        ga('send' ,'event', window.project.collection.models[0].attributes.name, 'Open SlideShow');
         window.project.imgOpen = true; 
         $(this).addClass("open");
         TweenLite.to($(this), 0.3, {maxHeight:1000, delay : 0.25});

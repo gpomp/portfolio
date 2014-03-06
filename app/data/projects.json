@@ -1,5 +1,10 @@
 [
     {
+        "filename": "powersmart",
+        "name": "BC Hydro - PowerSmart"
+    },
+
+    {
         "filename": "thedrive",
         "name": "The Drive"
     },

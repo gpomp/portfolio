@@ -22,7 +22,8 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="d3-canvas"></div>
+        <div id="webgl-canvas"></div>
+        <div id="dummy"></div>
         <header>
             <div class="container">
                 <div>Gauthier Pompougnac</div>
@@ -107,6 +108,11 @@
             ga('create','UA-47410818-1');ga('send','pageview'); 
         </script>
 
+
+
+        <script src="scripts/shaders/simplevertex.js" type="x-shader/x-vertex" data-name="simpleShader"></script>
+        <script src="scripts/shaders/simplefragment.js" type="x-shader/x-fragment" data-name="simpleShader"></script>
+
         <!-- build:js scripts/vendor.js -->
         <script src="bower_components/jquery/jquery.js"></script>
         <script src="bower_components/underscore/underscore.js"></script>
@@ -114,16 +120,32 @@
         <script src="bower_components/greensock/src/minified/plugins/CSSPlugin.min.js"></script>
         <script src="bower_components/greensock/src/minified/easing/EasePack.min.js"></script>
         <script src="bower_components/greensock/src/minified/TweenLite.min.js"></script>
+        <script src="bower_components/threejs/build/three.js"></script>
+        <script src="scripts/vendor/shaders/CopyShader.js"></script>
+        <script src="scripts/vendor/shaders/BokehShader.js"></script>
+        <script src="scripts/vendor/shaders/FocusShader.js"></script>
+        <script src="scripts/vendor/shaders/ConvolutionShader.js"></script>
+        <script src="scripts/vendor/shaders/FilmShader.js"></script> 
+ 
+        <script src="scripts/vendor/postprocessing/EffectComposer.js"></script>
+        <script src="scripts/vendor/postprocessing/RenderPass.js"></script>
+        <script src="scripts/vendor/postprocessing/ShaderPass.js"></script>
+        <script src="scripts/vendor/postprocessing/MaskPass.js"></script>
+        <script src="scripts/vendor/postprocessing/BokehPass.js"></script>
+        <script src="scripts/vendor/postprocessing/BloomPass.js"></script>
+        <script src="scripts/vendor/postprocessing/FilmPass.js"></script>
+        <script src="scripts/vendor/ShaderLoader.js"></script>
         <script src="bower_components/swipe/swipe.js"></script>
         <script src="bower_components/d3/d3.min.js"></script>
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/main.js -->
-        <script src="scripts/background.js"></script>
+        <script src="scripts/views/background.js"></script>
         <script src="scripts/project-list.js"></script>
         <script src="scripts/project.js"></script>
         <script src="scripts/router.js"></script>
         <script src="scripts/main.js"></script>
+        <script src="scripts/views/background.js"></script>
         <!-- endbuild -->
 </body>
 </html>
